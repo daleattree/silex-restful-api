@@ -26,7 +26,7 @@ $app->post('/login', function (Request $request) use ($app) {
     $app['session']->set('logged_in', true);
     if ($username != DEFAULT_USERNAME && $password != DEFAULT_PASSWORD) {
         $result = array('message' => 'Invalid login');
-        $code = 403;
+        $code = 401;
         $app['session']->set('logged_in', false);
     }
 
@@ -50,7 +50,7 @@ $app->get('/hello/{who}', function ($who) use ($app) {
 
     if (!$app['session']->get('logged_in')) {
         $result = array('message' => 'Access denied');
-        $code = 403;
+        $code = 401;
     }
 
     return $app->json($result, $code);
