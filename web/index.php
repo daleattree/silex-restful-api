@@ -12,8 +12,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
-define('DEFAULT_USERNAME', 'joburgphp');
-define('DEFAULT_PASSWORD', '@hackathon');
+define('DEFAULT_USERNAME', 'afrihost');
+define('DEFAULT_PASSWORD', 'CodingIsFun!');
 
 $app = new Silex\Application();
 
